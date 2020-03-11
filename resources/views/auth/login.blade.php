@@ -72,9 +72,9 @@
                 bottom: -40px;
                 width: auto;
                 height: auto;
-                background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.65))); /* Chrome,Safari4+ */
+                background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.15))); /* Chrome,Safari4+ */
                 z-index: 1;
-                opacity: 0.7;
+                opacity: 1;
             }
 
             .header{
