@@ -1,7 +1,7 @@
 <div class="body"></div>
         <div class="grad"></div>
         <div class="header">
-            <div><span>БНХАУ БОЛОН ОХУ , ЕВРОПЫН </span> <br><span>ОРНУУДААС МОНГОЛД БУУХ БОЛОН </span><br><span>МОНГОЛООР ДАМЖИН ӨНГӨРӨХ</span><br><span> АЧААНЫ БИЧИГ БАРИМТЫН САН</span></div>
+            <div><span>БНХАУ БОЛОН ОХУ ЕВРОПЫН </span> <br><span>ОРНУУДААС МОНГОЛД БУУХ БОЛОН </span><br><span>МОНГОЛООР ДАМЖИН ӨНГӨРӨХ</span><br><span> АЧААНЫ БИЧИГ БАРИМТЫН САН</span></div>
         </div>
         <br>
         <div class="login">
@@ -41,9 +41,7 @@
                                 <button type="submit" class="btn btn-primary">
                                     Нэвтрэх
                                 </button>
-                                <a  href="{{ route('register') }}"><button type="button" class="btn btn-primary">  Бүртгүүлэх
-                                  
-                                </button></a>
+
                         </div>
                     </form>
         </div>
@@ -81,30 +79,27 @@
 
             .header{
                 position: absolute;
-                top: calc(50% - 35px);
-                left: calc(34% - 205px);
+                top: calc(50% - 55px);
+                left: calc(14% - 205px);
                 z-index: 2;
             }
             
             .header div{
                 float: left;
-                color: #fff;
+                color: #1C2833;
                 font-size: 25px;
                 font-weight: 200;
                 font-family: Perforama;
             }
 
             .header div span{
-                color:#fff;
-
-
-
+                color:#1C2833;
             }
 
             .login{
                 position: absolute;
-                top: calc(50% - 75px);
-                left: calc(51% - 50px);
+                top: calc(70% - 120px);
+                left: calc(10% - 50px);
                 height: 150px;
                 width: 350px;
                 padding: 10px;
@@ -115,9 +110,9 @@
                 width: 250px;
                 height: 30px;
                 background: transparent;
-                border: 1px solid #fff;
+                border: 1px solid #1C2833;
                 border-radius: 2px;
-                color:#fff;
+                color:#1C2833;
                 font-family: 'Days';
                 font-size: 16px;
                 font-weight: 400;
@@ -129,9 +124,9 @@
                 width: 250px;
                 height: 30px;
                 background: transparent;
-                border: 1px solid #fff;
+                border: 1px solid #1C2833;
                 border-radius: 2px;
-                color: #fff;
+                color: #1C2833;
                 font-family: 'Days';
                 font-size: 16px;
                 font-weight: 400;
@@ -142,9 +137,9 @@
                 width: 250px;
                 height: 30px;
                 background: transparent;
-                border: 1px solid #fff;
+                border: 1px solid #1C2833;
                 border-radius: 2px;
-                color: #fff;
+                color: #1C2833;
                 font-family: 'Days';
                 font-size: 16px;
                 font-weight: 400;
@@ -154,11 +149,11 @@
             .login button{
                 width: 250px;
                 height: 35px;
-                background: #0c80b8;
-                border: 1px solid  #0c80b8;
+                background: #34495E;
+                border: 1px solid  #34495E;
                 cursor: pointer;
                 border-radius: 2px;
-                color: #fff;
+                color: #ffffff;
                 font-family: 'Days';
                 font-size: 16px;
                 font-weight: 400;
@@ -176,16 +171,16 @@
 
             .login input[type=text]:focus{
                 outline: none;
-                border: 1px solid #fff;
+                border: 1px solid #1C2833;
             }
 
             .login input[type=password]:focus{
                 outline: none;
-                border: 1px solid #fff;
+                border: 1px solid #1C2833;
             }
               .login input[type=email]:focus{
                 outline: none;
-                border: 1px solid #fff;
+                border: 1px solid #1C2833;
             }
 
             .login input[type=button]:focus{
@@ -193,11 +188,11 @@
             }
 
             ::-webkit-input-placeholder{
-               color:#fff;
+               color:#1C2833;
             }
 
             ::-moz-input-placeholder{
-               color: #fff;
+               color: #1C2833;
             }
             ::-webkit-input-placeholder {
    font-style: italic;
