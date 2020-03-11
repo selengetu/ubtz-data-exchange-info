@@ -79,7 +79,7 @@
 
             .header{
                 position: absolute;
-                top: calc(50% - 55px);
+                top: calc(55% - 55px);
                 left: calc(14% - 205px);
                 z-index: 2;
             }
@@ -98,7 +98,7 @@
 
             .login{
                 position: absolute;
-                top: calc(70% - 120px);
+                top: calc(75% - 120px);
                 left: calc(10% - 50px);
                 height: 150px;
                 width: 350px;
