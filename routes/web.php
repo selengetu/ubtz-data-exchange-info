@@ -25,6 +25,7 @@ Route::post('/changePassword','UserController@postCredentials');
 Route::get('/logout', 'Auth\LoginController@logout');
 Route::get('/home', 'HomeController@index')->name('home');
 Route::match(['get', 'post'],'/chart', 'HomeController@chart')->name('chart');
+Route::match(['get', 'post'],'/detail', 'HomeController@detail')->name('detail');
 Route::get('/hyanalt/{id}', ['as' => 'home.hyanalt', 'uses' => 'HomeController@hyanalt']);
 Route::post('/search', 'HomeController@search')->name('search');
 Route::get('/search', 'HomeController@search')->name('search');

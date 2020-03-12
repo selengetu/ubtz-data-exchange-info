@@ -106,4 +106,5 @@ return [
             'medeeachaadet' => 'Расширенная информация о грузе',
              'medeeachaa' => 'Информация о грузе',
             'niitmedee' => 'Всего',
+    'report' => 'Отчет',
         ];

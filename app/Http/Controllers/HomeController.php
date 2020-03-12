@@ -198,4 +198,61 @@ class HomeController extends Controller
 
         return view('chart',['count'=> $count,'gng'=> $gng,'gngtable'=> $gngtable, 'fdate' => $fdate, 'sdate' => $sdate]);
     }
+    public function detail()
+    {
+        $query = "";
+        $fidate= Request::input('endDate');
+        $stdate= Request::input('startDate');
+        $sdate= Carbon::today()->subDays(1)->format('Y-m-d');
+        $fdate=  Carbon::today()->format('Y-m-d');
+
+        if ($stdate !=0 && $stdate && $fidate !=0 && $fidate !=NULL) {
+            $query.="and TO_DATE(LOADDATE, 'yyyy-mm-dd') between TO_DATE('".$stdate."', 'yyyy-mm-dd') and TO_DATE('".$fidate."', 'yyyy-mm-dd')";
+            $sdate=$stdate;
+            $fdate=$fidate;
+        }
+        else
+        {
+            $query.="and TO_DATE(LOADDATE, 'yyyy-mm-dd') between TO_DATE('".$sdate."', 'yyyy-mm-dd') and TO_DATE('".$fdate."', 'yyyy-mm-dd')";
+
+        }
+
+        $loaddate  = DB::select("select t.HOSTSENDER, t.LOADDATE, count(t.LOADDATE) as wagcount, sum(f.BRUTTO) as brutto from OZ_IDX_X_BILL t ,  OZ_IDX_X_FRIEGHT f, OZ_IDX_X_WAGON w
+                              where t.BID=f.BID and w.BID=t.BID ".$query."
+                              group by  t.LOADDATE,t.HOSTSENDER  
+                              order by t.HOSTSENDER ,t.LOADDATE
+                             ");
+        $sendercode  = DB::select("select t.HOSTSENDER, t.SENDERCODE, t.SENDERNAME ,count(t.LOADDATE) as loaddate, count(t.LOADDATE) as wagcount, sum(f.BRUTTO) as brutto from OZ_IDX_X_BILL t,  OZ_IDX_X_FRIEGHT f, OZ_IDX_X_WAGON w
+                                  where t.BID=f.BID and w.BID=t.BID ".$query."
+                                  group by  t.HOSTSENDER,t.SENDERCODE , t.SENDERNAME
+                                      order by t.HOSTSENDER , t.SENDERNAME
+                             ");
+        $recievercode  = DB::select("select t.HOSTSENDER, t.RECIEVERCODE, t.RECIEVERNAME ,count(t.LOADDATE) as loaddate, count(t.LOADDATE) as wagcount, sum(f.BRUTTO) as brutto from OZ_IDX_X_BILL t,  OZ_IDX_X_FRIEGHT f, OZ_IDX_X_WAGON w
+                                   where t.BID=f.BID and w.BID=t.BID ".$query."
+                                    group by  t.HOSTSENDER,t.RECIEVERCODE, t.RECIEVERNAME
+                                        order by t.HOSTSENDER ,t.RECIEVERNAME
+                             ");
+        $senderst  = DB::select("select t.HOSTSENDER,t.FROMSTCODE, t.FROMSTNAME ,count(w.WAGNO) as wagcount, sum(f.BRUTTO) as brutto from OZ_IDX_X_BILL t ,  OZ_IDX_X_FRIEGHT f, OZ_IDX_X_WAGON w
+                                where t.BID=f.BID and w.BID=t.BID  ".$query."
+                                group by  t.HOSTSENDER,t.FROMSTCODE, t.FROMSTNAME
+                                   order by t.HOSTSENDER , t.FROMSTNAME
+                             ");
+        $recieverst  = DB::select("select t.HOSTSENDER,t.TOSTCODE, t.TOSTNAME ,count(w.WAGNO) as wagcount, sum(f.BRUTTO) as brutto from OZ_IDX_X_BILL t ,  OZ_IDX_X_FRIEGHT f, OZ_IDX_X_WAGON w
+                                    where t.BID=f.BID and w.BID=t.BID  ".$query."
+                                    group by  t.HOSTSENDER,t.TOSTCODE, t.TOSTNAME
+                                       order by t.HOSTSENDER ,t.TOSTNAME 
+                             ");
+        $senderrail  = DB::select("select t.HOSTSENDER,t.FROMRAILCODE ,count(w.WAGNO) as wagcount, sum(f.BRUTTO) as brutto from OZ_IDX_X_BILL t,  OZ_IDX_X_FRIEGHT f, OZ_IDX_X_WAGON w
+                                    where t.BID=f.BID and w.BID=t.BID ".$query."
+                                    group by  t.HOSTSENDER,t.FROMRAILCODE
+                                      order by t.HOSTSENDER ,t.FROMRAILCODE 
+                             ");
+        $recieverrail  = DB::select("select t.HOSTSENDER,t.TORAILCODE ,count(w.WAGNO) as wagcount, sum(f.BRUTTO) as brutto from OZ_IDX_X_BILL t ,  OZ_IDX_X_FRIEGHT f, OZ_IDX_X_WAGON w
+                                    where t.BID=f.BID and w.BID=t.BID ".$query."
+                                    group by  t.HOSTSENDER,t.TORAILCODE
+                                      order by t.HOSTSENDER ,t.TORAILCODE 
+                             ");
+        return view('detail',['loaddate'=> $loaddate,'sendercode'=> $sendercode,'recievercode'=> $recievercode, 'fdate' => $fdate, 'sdate' => $sdate
+                                    , 'senderst' => $senderst, 'recieverst' => $recieverst, 'senderrail' => $senderrail, 'recieverrail' => $recieverrail]);
+    }
 }

@@ -98,4 +98,5 @@ return [
     'medeeachaadet' => 'Ачааны мэдээлэл',
     'medeeachaa' => 'Ачааны дэлгэрэнгүй мэдээлэл',
     'niitmedee' => 'Нийт мэдээ',
+    'report' => 'Тайлан',
 ];
