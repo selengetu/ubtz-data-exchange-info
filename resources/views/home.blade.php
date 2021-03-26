@@ -405,7 +405,7 @@
 
                           @foreach($kresult as $kresults)
                               <tr>
-                                  <td class= "hidden nr">{{$results->bid}}</td>
+                                  <td class= "hidden nr">{{$kresults->bid}}</td>
                                   <td ><b>{{$kresults->billno}}</b></td>
                                   <td>{{$kresults->loaddate}}</td>
                                   <td>{{$kresults->fromstcode ." ". $kresults->fromstname}}</td>
