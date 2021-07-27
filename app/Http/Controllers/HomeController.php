@@ -259,30 +259,16 @@ class HomeController extends Controller
     public function container()
     {
         $query = "";
-        $fidate= Request::input('endDate');
-        $stdate= Request::input('startDate');
-        $sdate= Carbon::today()->subDays(1)->format('Y-m-d');
-        $fdate=  Carbon::today()->format('Y-m-d');
+        $pContNumber= Request::input('pContNumber');
+        $pContMark= Request::input('pContMark');
 
-        if ($stdate !=0 && $stdate && $fidate !=0 && $fidate !=NULL) {
-            $query.="and TO_DATE(LOADDATE, 'yyyy-mm-dd') between TO_DATE('".$stdate."', 'yyyy-mm-dd') and TO_DATE('".$fidate."', 'yyyy-mm-dd')";
-            $sdate=$stdate;
-            $fdate=$fidate;
-        }
-        else
-        {
-            $query.="and TO_DATE(LOADDATE, 'yyyy-mm-dd') between TO_DATE('".$sdate."', 'yyyy-mm-dd') and TO_DATE('".$fdate."', 'yyyy-mm-dd')";
-
-        }
         $bindings = [
-            'pContNumber'  =>  '9344299',
-            'pContMark'  => 'TGHU',
-            'pReportRow' => ':pReportRow'
+            'pContNumber'  =>   $pContNumber,
+            'pContMark'  =>  $pContMark,
             ];
-            $rep = DB::executeProcedure('get_tracking', $bindings);
-      
-            dd($rep);
-        return view('container',['count'=> $count,'gng'=> $gng,'gngtable'=> $gngtable, 'fdate' => $fdate, 'sdate' => $sdate]);
+            $rep = DB::executeProcedureWithCursor('get_tracking', $bindings);
+
+        return view('container',['rep'=> $rep, 'pContNumber' => $pContNumber, 'pContMark' => $pContMark]);
     }
 
 }
