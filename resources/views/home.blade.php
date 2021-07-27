@@ -12,6 +12,7 @@
     <div class="col-md-2" > <!-- XAILT-->
         <button class="btn btn-block" style="background-color: #a4294a; border-color:#a4294a;color:white" onclick="window.location='{{ url("chart") }}'"> {{ trans('messages.chart') }}</button>
         <button class="btn btn-block" style="background-color: #a4294a; border-color:#a4294a;color:white" onclick="window.location='{{ url("detail") }}'"> {{ trans('messages.report') }}</button>
+        <button class="btn btn-block" style="background-color: #a4294a; border-color:#a4294a;color:white" onclick="window.location='{{ url("container") }}'"> Чингэлэг хайлт </button>
       <div class="panel" style="background-color:#3493ce; color: #ffffff; width: 100%;"  > 
                <div class="panel-heading">
                   <h4 class="panel-title accordion-toggle accordion-toggle-styled " data-toggle="collapse" data-parent="#accordion" href="#sear">
