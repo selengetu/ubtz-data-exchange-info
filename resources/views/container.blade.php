@@ -82,9 +82,9 @@
                             <th> Хүлээн авсан огноо</th>
                             <th> Чиглэл</th>
                             <th> Вагон №</th>
-                            <th> Билл №</th>
-                            <th>Чингэлэг</th>
-                            <th>Ачааны жин</th>
+                            <th> Падаан дугаар</th>
+                            <th>Ачааны нэр төрөл</th>
+                            <th>Ачааны жин тн.</th>
                             <th>Чингэлэг №</th>
                         </tr>
                         </thead>
@@ -97,7 +97,7 @@
                                   <td >{{$p->from_stname}} - {{$p->to_stname}}</td>
                                   <td >{{$p->wno}}</td>
                                   <td >{{$p->bill_no}}</td>
-                                  <td >{{$p->gruz_code}} {{$p->fname}} </td>
+                                  <td >{{$p->fname}} </td>
                                   <td >{{$p->fweight}}</td>
                                   <td >{{$p->cont_numbers}}</td>
                                    </tr>
