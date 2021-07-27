@@ -113,7 +113,9 @@
             <div>
 
 @endsection
-  <script src="{{ asset('js/jquerychart.js') }}"></script>
+<script src="{{ asset('js/jquery.min.js') }}"></script>
+ <script src="{{ asset('js/mainjquery.js') }}"></script>
+  <script src="{{ asset('js/jquerylast.js') }}"></script>
                 <script src="{{ asset('js/jquery.dataTables.min.js') }}"></script>
                 <script src="{{ asset('js/dataTables.buttons.min.js') }}"></script>
                 <script src="{{ asset('js/bootstrapvalidator.js') }}"></script>
