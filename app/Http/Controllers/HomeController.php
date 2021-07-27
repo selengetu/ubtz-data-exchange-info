@@ -279,7 +279,6 @@ class HomeController extends Controller
             'pContMark'  => 'TGHU',
             'pReportRow' => ':pReportRow'
             ];
-     
             $rep = DB::executeProcedure('get_tracking', $bindings);
       
             dd($rep);
