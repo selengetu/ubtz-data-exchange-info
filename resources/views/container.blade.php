@@ -6,7 +6,20 @@
 
 @endpush
 
-
+<style>
+    .alert {
+    position: relative;
+    padding: 1rem 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+}
+.alert-primary {
+    color: #084298;
+    background-color: #cfe2ff;
+    border-color: #b6d4fe;
+}
+</style>
 @section('main_container')
     <div class="row">
         <div class="col-md-2" > <!-- XAILT-->
@@ -71,7 +84,9 @@
 
         </div>
         <div class="col-md-9" style="background-color: #fff;height: 100%;"> <!-- TABLE-->
-          
+        <div class="alert alert-primary" role="alert">
+        СҮҮЛИЙН 7 ХОНОГИЙН ХУГАЦААНД ХАМААРАХ ГАЛТ ТЭРЭГНИЙ ХӨДӨЛГӨӨНИЙ ТҮҮХЭЭС ХАЙЛТЫГ ХИЙЖ БАЙГАА БОЛНО
+            </div>
             <div class="row">
                 
                     <table id="users" class="table  table-striped table-bordered" >
