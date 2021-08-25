@@ -84,11 +84,33 @@
 
         </div>
         <div class="col-md-9" style="background-color: #fff;height: 100%;"> <!-- TABLE-->
-        <div class="alert alert-primary" role="alert">
+        <h1 style="color:#0b449e"><b><center>ЧИНГЭЛЭГ ХАЙЛТ /УБТЗ ХНН/</center></b></h1>
+        <div class="row">
+                    <div class="col-xs-2 col-sm-2 col-md-2">
+                     <img src="http://localhost:8000/images/c1.jpg" width="100%" class="img-rounded">
+                    </div>
+                    <div class="col-xs-2 col-sm-2 col-md-2">
+                      <img src="http://localhost:8000/images/c2.jpg" width="100%" class="img-rounded">
+                    </div>
+                    <div class="col-xs-2 col-sm-2 col-md-2">
+                         <img src="http://localhost:8000/images/c3.jpg" width="100%" class="img-rounded">
+                    </div>
+                    <div class="col-xs-2 col-sm-2 col-md-2">
+                       <img src="http://localhost:8000/images/c4.png" width="100%" class="img-rounded">
+                    </div>
+                    <div class="col-xs-2 col-sm-2 col-md-2">
+                        <img src="http://localhost:8000/images/c5.jpg" width="100%" class="img-rounded">
+                    </div>
+
+                    <div class="col-xs-2 col-sm-2 col-md-2">
+                         <img src="http://localhost:8000/images/c6.jpg" width="100%" class="img-rounded">
+                    </div>
+                </div>
+            <div class="row">
+         
+            <div class="alert alert-primary" role="alert">
         СҮҮЛИЙН 7 ХОНОГИЙН ХУГАЦААНД ХАМААРАХ ГАЛТ ТЭРЭГНИЙ ХӨДӨЛГӨӨНИЙ ТҮҮХЭЭС ХАЙЛТЫГ ХИЙЖ БАЙГАА БОЛНО
             </div>
-            <div class="row">
-                
                     <table id="users" class="table  table-striped table-bordered" >
                         <thead>
                         <tr style="color: #fff;" bgcolor="#3493ce">
@@ -121,7 +143,7 @@
                      
                         </tbody>
                     </table>
-               
+                   
             </div>
             </div>
 
