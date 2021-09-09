@@ -92,11 +92,11 @@
                     <div class="col-xs-2 col-sm-2 col-md-2">
                     <img src="{{URL::asset('/images/c2.jpg')}}" width="100%" class="img-rounded">
                     </div>
-                    </div>
+                   
                     <div class="col-xs-2 col-sm-2 col-md-2">
                     <img src="{{URL::asset('/images/c3.jpg')}}" width="100%" class="img-rounded">
                     </div>
-                    </div>
+            
                     <div class="col-xs-2 col-sm-2 col-md-2">
                     <img src="{{URL::asset('/images/c4.png')}}" width="100%" class="img-rounded">
                     </div>
