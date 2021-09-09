@@ -87,23 +87,25 @@
         <h1 style="color:#0b449e"><b><center>ЧИНГЭЛЭГ ХАЙЛТ /УБТЗ ХНН/</center></b></h1>
         <div class="row">
                     <div class="col-xs-2 col-sm-2 col-md-2">
-                     <img src="http://localhost:8000/images/c1.jpg" width="100%" class="img-rounded">
+                    <img src="{{URL::asset('/images/c1.jpg')}}" width="100%" class="img-rounded">
                     </div>
                     <div class="col-xs-2 col-sm-2 col-md-2">
-                      <img src="http://localhost:8000/images/c2.jpg" width="100%" class="img-rounded">
+                    <img src="{{URL::asset('/images/c2.jpg')}}" width="100%" class="img-rounded">
+                    </div>
                     </div>
                     <div class="col-xs-2 col-sm-2 col-md-2">
-                         <img src="http://localhost:8000/images/c3.jpg" width="100%" class="img-rounded">
+                    <img src="{{URL::asset('/images/c3.jpg')}}" width="100%" class="img-rounded">
+                    </div>
                     </div>
                     <div class="col-xs-2 col-sm-2 col-md-2">
-                       <img src="http://localhost:8000/images/c4.png" width="100%" class="img-rounded">
+                    <img src="{{URL::asset('/images/c4.png')}}" width="100%" class="img-rounded">
                     </div>
                     <div class="col-xs-2 col-sm-2 col-md-2">
-                        <img src="http://localhost:8000/images/c5.jpg" width="100%" class="img-rounded">
+                    <img src="{{URL::asset('/images/c5.jpg')}}" width="100%" class="img-rounded">
                     </div>
 
                     <div class="col-xs-2 col-sm-2 col-md-2">
-                         <img src="http://localhost:8000/images/c6.jpg" width="100%" class="img-rounded">
+                    <img src="{{URL::asset('/images/c6.jpg')}}" width="100%" class="img-rounded">
                     </div>
                 </div>
             <div class="row">
