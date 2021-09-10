@@ -99,6 +99,7 @@
                     <table id="users" class="table  table-striped table-bordered" >
                         <thead>
                         <tr style="color: #fff;" bgcolor="#3493ce">
+                            <th>Чингэлэг №</th>
                             <th> Галт тэрэгний №</th>
                             <th> Илгээсэн огноо</th>
                             <th> Хүлээн авсан огноо</th>
@@ -107,12 +108,12 @@
                             <th> Падаан дугаар</th>
                             <th>Ачааны нэр төрөл</th>
                             <th>Ачааны жин тн.</th>
-                            <th>Чингэлэг №</th>
                         </tr>
                         </thead>
                         <tbody>
                         @foreach($rep as $p)
                               <tr>
+                                  <td >{{$p->cont_numbers}}</td>
                                   <td >{{$p->train_no}}</td>
                                   <td >{{$p->send_date}}</td>
                                   <td >{{$p->receive_date}}</td>
@@ -121,7 +122,7 @@
                                   <td >{{$p->bill_no}}</td>
                                   <td >{{$p->fname}} </td>
                                   <td >{{$p->fweight}}</td>
-                                  <td >{{$p->cont_numbers}}</td>
+                                  
                                    </tr>
 
                           @endforeach
