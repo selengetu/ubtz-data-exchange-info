@@ -5,7 +5,6 @@
     <!--<link href=" <link href="{{ asset("css/myFile.min.css") }}" rel="stylesheet">" rel="stylesheet">-->
 
 @endpush
-
 <style>
     .alert {
     position: relative;
@@ -34,25 +33,7 @@
                 <div class="panel-body">
                     <form method="post" action="container">
                         <div class="form-group row">
-
-
                             <div class="col-md-12 col-sm-4">
-
-                                <div class="form-group form-md-line-input form-md-floating-label">
-                                    <div class="input-icon">
-                                        <input id="pContMark" name="pContMark" type="text" class="form-control" value="{{$pContMark}}"  placeholder="TGHU"
-                                               />
-
-                                        <i class="fa fa-calendar-plus-o" >
-                                        </i>  <label style="font-size:12px;">
-
-                                         Чингэлэг сери
-                                        </label>
-
-
-                                    </div>
-                                </div>
-                            </div>
                             <div class="col-md-12 col-sm-4">
                                 <div class="form-group form-md-line-input form-md-floating-label">
                                     <div class="input-icon">
@@ -63,25 +44,27 @@
                                         <label for="form_control_1" style="font-size:12px;">
                                         Чингэлэг №
                                         </label>
-
-
                                     </div>
                                 </div>
                             </div>
-
-
+                                <div class="form-group form-md-line-input form-md-floating-label">
+                                    <div class="input-icon">
+                                        <input id="pContMark" name="pContMark" type="text" class="form-control" value="{{$pContMark}}"  placeholder="TGHU"
+                                               /> <i class="fa fa-calendar-plus-o" > </i>  
+                                        <label style="font-size:12px;">
+                                            Чингэлэг сери
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="col-md-12 col-sm-4">
                                 <input type="hidden" name="_token" value="{{ csrf_token() }}" />
                                 <button class="btn submit btn-block" style="background-color: #2975a4; border-color:#246690"><i class="fa fa-search"></i> {{ trans('messages.search') }}</button>
                             </div>
-
                         </div>
                     </form>
                 </div>
             </div>
-
-
-
         </div>
         <div class="col-md-9" style="background-color: #fff;height: 100%;"> <!-- TABLE-->
         <h1 style="color:#0b449e"><b><center>ЧИНГЭЛЭГ ХАЙЛТ /УБТЗ ХНН/</center></b></h1>
